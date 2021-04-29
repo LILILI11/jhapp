@@ -22,14 +22,15 @@
         <View
             android:id="@+id/view_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="300dp"
             android:layout_below="@+id/body_toolbar"
             android:background="#bedbbb" />
         <androidx.appcompat.widget.Toolbar
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/body_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#ABCAA8">
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"

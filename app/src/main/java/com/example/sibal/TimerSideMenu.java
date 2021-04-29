@@ -86,14 +86,30 @@ public class TimerSideMenu extends AppCompatActivity {
                     }
                 });
                 ad.show();
+
+              /*  String input=textcountdown.getText().toString();
+                if(input.length()==0){
+                    Toast.makeText(TimerSideMenu.this,"empty",Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                long millisInput=Long.parseLong(input)*1000;
+                if(millisInput==0){
+                    Toast.makeText(TimerSideMenu.this,"empty",Toast.LENGTH_LONG).show();
+                    return;
+                }
+                setTime(millisInput);
+                textcountdown.setText("");*/
             }
+
+
         });
         //팝업창 만드는 코드 이 위 까지
 
         mButtonSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String input=mEditTextInput.getText().toString();
+                String input= mEditTextInput.getText().toString();
                 if(input.length()==0){
                     Toast.makeText(TimerSideMenu.this,"empty",Toast.LENGTH_LONG).show();
                     return;
@@ -188,13 +204,13 @@ public class TimerSideMenu extends AppCompatActivity {
     private void  updateWatchInterface(){ //updateButtons
         if(mTimerRunning){
             mEditTextInput.setVisibility(View.VISIBLE); //edit버튼
-            mButtonSet.setVisibility(View.VISIBLE);
+            //mButtonSet.setVisibility(View.VISIBLE);
 
             mButtonReset.setVisibility(View.INVISIBLE);
             mButtonStart.setText("Pause");
         }else{
             mEditTextInput.setVisibility(View.VISIBLE);
-            mButtonSet.setVisibility(View.VISIBLE);
+            //mButtonSet.setVisibility(View.VISIBLE);
             mButtonStart.setText("start");
 
             if(mTimeLeftInMillis<1000){
